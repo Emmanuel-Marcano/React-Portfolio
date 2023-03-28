@@ -1,0 +1,385 @@
+:root {
+  --bg-color: #f6f9fc;
+  --typewriterSpeed: 1s;
+  --typewriterCharacters: 5;
+  --desktopFontSize: 19px;
+  --mobileFontSize: 17px;
+  --animationSpeed: 1s;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html{
+  overflow: hidden;
+}
+
+p{
+  font-size: var(--mobileFontSize);
+}
+
+
+body{
+  margin: 0;
+  background-color: #f6f9fc;
+  color: #333333;
+  overflow: hidden;
+}
+
+
+/********************************  Navigation  *********************************/
+
+.navigation{
+  background-color: #f6f9fc;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+}
+
+.nav-item{
+  text-align: center;
+  cursor: pointer;
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  /* border: 1px solid black; */
+}
+
+.nav-item p {
+  color:#333333
+}
+
+.nav-bar {
+  position: absolute;
+  left: 0;
+  top:0px;
+  height: 4px;
+  width: 90px;
+  background-color: #0082FA;
+  transition: transform 0.3s ease;
+ 
+}
+
+.icon{
+  transition: color 0.5s ease;
+  color:#555555;
+}
+
+
+/********************************  Homepage  *********************************/
+
+.accent{
+  font-weight: 700;
+  color: #0082FA;
+}
+
+.homepage {
+    /* border: 2px solid black; */
+    height: calc(100svh - 105px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage h1{
+  font-size: 28px;
+}
+
+
+.flex{
+  display: flex;
+  font-size: 24px;
+  height: 60px;
+  width: max-content;
+}
+
+.static-text{
+  margin: 2px;
+  font-size: 24px;
+  
+}
+
+.dynamic-text{
+  line-height: 90px;
+  padding: 0;
+  margin-top: 0;
+  margin-left: 8px;
+  overflow: hidden;
+}
+
+.dynamic-text li{
+  margin: 0;
+  list-style: none;
+  position: relative;
+  top: -24px ;
+  animation: slide 8s steps(4) infinite;
+}
+
+.dynamic-text span{
+  position: relative;
+}
+
+.dynamic-text span::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.dynamic-text span::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.dynamic-text span::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+   infinite alternate;
+}
+
+.dynamic-text span::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+      infinite alternate,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes slide {
+  100%{
+    top:-384px;
+  }
+}
+
+
+
+/********************************  Contact  *********************************/
+
+.contact-section {
+  height: calc(100svh - 105px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  /* background-color: rgb(211, 207, 207); */
+  background-color: #f6f9fc;
+  width: 85%;
+  border-radius: 10px;
+  /* padding: 15px; */
+  position: relative;
+  /* padding-left: 30px; */
+  /* padding-bottom: 21px; */
+  gap: 20px;
+  z-index: 1;
+  
+}
+
+
+/* .panel::before{
+  content: "Send me a message anytime";
+  width: 25%;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f6f9fc;
+  border-radius: 10px;
+  z-index: -1;
+} */
+
+/* 
+.panel::after{
+  content: "Yes, anytime";
+  width: 25%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #333333;
+ 
+  z-index: -1;
+  animation: grow 2s ease forwards;
+}  */
+
+.contact-text a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #333333;
+  color: white;
+  border-radius: 3px;
+  margin-top: 5px;
+  font-weight: 500;
+
+ 
+  
+}
+
+
+
+
+.contact-text{
+  transform: translateX(-100%);
+  animation: slide-in-from-right var(--animationSpeed) ease forwards;
+  opacity: 0;
+}
+
+
+.contact-cards {
+  
+  position: relative;
+  transform: translateX(100%);
+  right: -45px;
+  animation: slide-in-from-left var(--animationSpeed) ease forwards;
+  margin-top: 20px;
+ 
+}
+
+.github-card{
+  display: none;
+}
+
+.linkedin-card{
+  position: relative;
+  right: -70px;
+}
+
+.card {
+  width: 430px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+
+
+
+
+
+ @keyframes grow {
+  100%{
+    transform: scaleY(1.2);
+  }
+
+
+} 
+
+@keyframes slide-in-from-left{
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-from-right{
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+/********************************  Responsiveness *********************************/
+
+
+@media only screen and (min-width: 600px) {
+
+  p{
+    font-size: var(--desktopFontSize);
+  }
+
+  .flex {
+      /* width: 700px; */
+      font-size: 22px;
+  }
+
+  .homepage h1{
+    font-size: 50px;
+  }
+
+  .nav-bar{
+      width: 280px;
+  }
+
+  .cta{
+      margin-top: 10px;
+  }
+
+
+  .panel{
+    /* background-color: rgb(180, 142, 142); */
+    /* background-color: #f6f9fc; */
+   
+    
+    
+    
+  }
+
+  
+
+  .contact-text{
+    width: 50%;
+  }
+
+  .panel::before{
+    background-color: rgb(228, 228, 228);
+    background-color: #0b0d0e;
+    animation: grow var(--animationSpeed) ease forwards; 
+
+
+
+  }
+
+  .contact-cards {
+    display: flex;
+    right: -580px;
+  }
+
+  .card{
+    margin: 10px;
+  }
+
+  .github-card{
+    display: block;
+    
+  }
+
+  .linkedin-card{
+    position: static;
+    right:0;
+
+  }
+
+ 
+  
+}
