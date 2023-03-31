@@ -2,7 +2,7 @@
 function Blog(){
 
     return (
-        <h1>Blog</h1>
+        <h1>Blog (coming soon)</h1>
         
 
 

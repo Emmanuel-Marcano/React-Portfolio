@@ -13,12 +13,15 @@ function App() {
 
   let navBar = useRef()
   
+  
 
   return (
 
     <BrowserRouter>
     <div  className="App">
       <div ref={navBar} className="nav-bar"></div>
+
+      <Container>
     
           <Routes>
             <Route path='/' element={<Home/>}/> 
@@ -28,6 +31,7 @@ function App() {
             <Route path='/blog' element={<Blog/>}/> 
           </Routes>
           <Navigation nav={navBar}/>
+          </Container>
        
     </div>
     </BrowserRouter>
