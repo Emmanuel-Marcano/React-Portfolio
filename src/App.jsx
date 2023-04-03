@@ -20,9 +20,7 @@ function App() {
     <BrowserRouter>
     <div  className="App">
       <div ref={navBar} className="nav-bar"></div>
-
       <Container>
-    
           <Routes>
             <Route path='/' element={<Home/>}/> 
             <Route path='/about' element={<About/>}/> 
@@ -32,7 +30,6 @@ function App() {
           </Routes>
           <Navigation nav={navBar}/>
           </Container>
-       
     </div>
     </BrowserRouter>
   )

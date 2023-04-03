@@ -1,6 +1,8 @@
 
 import { useState, useEffect, useRef } from "react"
 
+import alphabet from '../assets/alphabet.avif'
+
 
 
 // let observer = new IntersectionObserver((entries) => {
@@ -73,15 +75,48 @@ function About(){
             <div className="about-showcase">
 
                 <div className="about-text">
-                    <h1>About</h1>
-                    <p>Born in Puerto Rico</p>
-                    <p>Based in Amsterdam</p>
+                    {/* <p className="about-headers">Born in Puerto Rico <br /> Based in Amsterdam</p> */}
+
+                    <div className="about-header-container">
+                        <p className="about-pr">orn in Puerto Rico</p>
+                        <p className="about-ams">ased in Amsterdam</p>
+                    </div>
+
+
+
                     <p>Since 2020, I've enjoyed turning complex problems into simple, attractive and intuitive designs.
                         When I'm not coding, you'll find me drinking coffee at the nearest cafe, making fun of the latest
                         Netflix reality show alongside my girlfriend or working out.
                     </p>
                 </div>
-                <div className="about-image-grid">
+                <div className="about-images">
+
+                    <div className="image-grid">
+
+                        <div className="about-img">
+                            <img src={alphabet} alt="" />
+                        </div>
+
+                        <div className="about-img">
+                            <img src={alphabet} alt="" />
+                        </div>
+
+                        <div className="about-img">
+                            <img src={alphabet} alt="" />
+                        </div>
+
+                        <div className="about-img">
+                            <img src={alphabet} alt="" />
+                        </div>
+
+                      
+
+
+                    </div>
+
+
+
+
 
 
                 </div>
@@ -97,7 +132,7 @@ function About(){
                     <li>CSS</li>
                     <li>JavaScript</li>
                     <li>React</li>
-                    <li>Bootstrap (a bit)</li>
+                    <li>Hover over the graph ;)</li>
                   </ul>
                </div>
 
@@ -113,12 +148,18 @@ function About(){
                </div>
 
            <div className="skills-graph">
-               <div ref={myRef} className="skills-graphic hidden-el">
-                    <span className="front">Front-End</span>
-                    <span className="back">Back-End</span>
-                    <span className="inner-circle"></span>
-              </div>
-              </div>
+
+                <div className="scalable-background">
+                <div ref={myRef} className="skills-graphic hidden-el">
+                        <span className="front">Front</span>
+                        <span className="back">Back</span>
+                        <span className="inner-circle-1"></span>
+                        <span className="inner-circle-2"></span>
+                        <span className="css-done">Graph Done with CSS</span>
+                       
+                </div>
+                </div>
+                </div>
             </div>
 
 
