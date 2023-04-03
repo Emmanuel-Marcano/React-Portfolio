@@ -8,6 +8,11 @@ import insta from '../assets/insta.avif'
 import foam from '../assets/foam.avif'
 import dimensional from '../assets/dimensional.avif'
 
+
+
+
+
+
 function Projects(){
 
     

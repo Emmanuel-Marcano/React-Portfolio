@@ -38,9 +38,7 @@ body {
 }
 
 /********************************  Utility Classes  *********************************/
-.p {
-  margin: 0;
-}
+
 
 .btn {
   display: inline-block;
@@ -80,6 +78,8 @@ body {
   display: flex;
   bottom: 0;
   transition: transform 0.5s ease;
+  z-index: 5;
+
 }
 
 .nav-item {
@@ -213,9 +213,170 @@ body {
     top:-384px;
   }
 }
+
+/********************************  About  *********************************/
+
+
+.about-section {
+  min-height: calc(100svh - 105px);
+}
+
+.about-showcase {
+  height: calc(100svh - 105px);
+}
+
+.skills-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:30px;
+}
+
+.about-skills {
+  border-top: 1px solid rgba(178, 178, 178, 0.75);
+  border-bottom: 1px solid rgba(178, 178, 178, 0.75);
+  overflow: hidden;
+  padding: 80px 40px;
+  /* -webkit-box-shadow:  0px -2px 3px rgba(178, 178, 178, 0.75);
+  -moz-box-shadow:  0px -2px 3px rgba(178, 178, 178, 0.75);
+  box-shadow:  0px -2px 3px rgba(178, 178, 178, 0.75); */
+}
+
+.skills-list p {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+ .skills-list ul{
+  list-style: none;
+  padding: 0;
+} 
+
+.skills-list{
+  text-align: center;
+}
+
+.skills-graph{
+  /* border: 1px solid black; */
+
+
+}
+
+.skills-graphic {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  font-size: 20px;
+  font-weight: 600;
+  background: #C9CCD3;
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+  background-blend-mode: screen;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  /* transform: translateY(150%); */
+
+}
+
+.skills-graphic::before{
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 8px;
+  height: 50%;
+  top: 0;
+  left: 150px;
+}
+
+
+.skills-graphic::after{
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 50%;
+  height: 8px;
+  bottom: 150px;
+  left: 150px;
+}
+
+.circle::after{
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 50%;
+  height: 8px;
+  bottom: 150px;
+  left: 150px;
+}
+
+.inner-circle{
+  position: absolute;
+  width: 150px;
+  height: 143px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+background-blend-mode: multiply,multiply;
+  right: -8px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.front{
+  position: absolute;
+  bottom: 90px;
+  left: 80px;
+  color: #333333;
+  letter-spacing: 1px;
+}
+
+.back {
+  position: absolute;
+  right: 30px;
+  top: 70px;
+  z-index: 3;
+  letter-spacing: 1px;
+}
+
+.hidden-el{
+
+ 
+
+
+
+}
+
+.appear {
+  transition: 1s ease;
+  transform: translateY(0);
+}
+
+.long-height{
+  height: 2000px;
+}
+
+
 /********************************  Projects  *********************************/
 
-.project{
+.project-grid {
+  padding-top: 30px;
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  max-width: 85%;
+  margin: 0 auto;
+  grid-template-areas: 
+  "eth eth alphabet"
+  "eth eth traveler"
+  "astro cube traveler"
+  "cup insta insta"
+  "cup insta insta"
+  "foam foam dimensional"
+  "foam foam dimensional";
+}
+
+.project {
   opacity: 0;
   position: relative;
 }
@@ -243,22 +404,6 @@ body {
   cursor: pointer;
 }
 
-.project-grid{
-  padding-top: 30px;
-  display: grid;
-  gap: 12px;
-  width: 100%;
-  max-width: 85%;
-  margin: 0 auto;
-  grid-template-areas: 
-  "eth eth alphabet"
-  "eth eth traveler"
-  "astro cube traveler"
-  "cup insta insta"
-  "cup insta insta"
-  "foam foam dimensional"
-  "foam foam dimensional";
-}
 
 .project-grid::after{
   content: "";
@@ -359,7 +504,6 @@ body {
 .contact-section {
   height: calc(100svh - 105px);
   overflow: hidden;
- 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -490,4 +634,31 @@ body {
   .project .overlay{
     font-size: 30px;
   }
+
+
+
+.skills-grid{
+ 
+  grid-template-columns: 1fr 2fr 1fr;
+  
+
+}
+
+.skills-list:nth-child(1){
+  order: 1;
+
+}
+.skills-graph{
+  order: 2;
+}
+
+
+.skills-list:nth-child(2){
+  order: 3;
+
+}
+
+
+
+
 }
