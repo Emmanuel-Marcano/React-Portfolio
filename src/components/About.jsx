@@ -48,21 +48,21 @@ function About(){
    
 
 
-    useEffect(function(){
+    // useEffect(function(){
 
 
-        let observer = new IntersectionObserver(function(entries){
-            let entry = entries[0]
-            console.log('entry', entry)
+    //     let observer = new IntersectionObserver(function(entries){
+    //         let entry = entries[0]
+    //         console.log('entry', entry)
           
-            setMyElementIsVisible(entry.isIntersecting)
-        })
-        observer.observe(myRef.current, options)
+    //         setMyElementIsVisible(entry.isIntersecting)
+    //     })
+    //     observer.observe(myRef.current, options)
 
-        console.log( 'iin',myElementIsVisible)
-        console.log(myRef.current)
+    //     console.log( 'iin',myElementIsVisible)
+    //     console.log(myRef.current)
 
-    },[])
+    // },[])
 
 
    

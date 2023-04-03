@@ -68,6 +68,11 @@ body {
   overflow: hidden;
 }
 
+.cursor{
+  cursor: pointer;
+  text-decoration: none;
+}
+
 
 /********************************  Navigation  *********************************/
 
@@ -84,11 +89,9 @@ body {
 
 .nav-item {
   text-align: center;
-  cursor: pointer;
   flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 5px;
-  text-decoration: none;
 }
 
 .nav-item p {

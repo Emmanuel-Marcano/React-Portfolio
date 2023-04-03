@@ -4,14 +4,22 @@ import {useRef, useState} from 'react'
 import {Link} from 'react-router-dom'
 let previousElement;
 
-
-
 function Navigation({nav}){
-    let [houseIcon, setHouseIcon] = useState("icon fa-solid fa-house fa-xl home")
-    let [aboutIcon, setAboutIcon] = useState("icon fa-solid fa-user fa-xl about")
-    let [projectsIcon, setProjectsIcon] = useState("icon fa-solid fa-folder fa-xl projects")
-    let [contactIcon, setContactIcon] = useState("icon fa-solid fa-envelope fa-xl contact")
-    let [blogIcon, setBlogIcon] = useState("icon fa-solid fa-pen fa-xl blog")
+
+    window.onscroll = function() {
+        if ((window.scrollY + window.innerHeight + 100) >= document.body.scrollHeight && window.location.toString().includes("projects")) {
+            navigation.current.classList.add('slide-off')
+        }
+        else {
+            navigation.current.classList.remove('slide-off')
+        }
+    };
+
+    let [houseIcon, setHouseIcon] = useState("icon fa-solid fa-house fa-xl")
+    let [aboutIcon, setAboutIcon] = useState("icon fa-solid fa-user fa-xl")
+    let [projectsIcon, setProjectsIcon] = useState("icon fa-solid fa-folder fa-xl")
+    let [contactIcon, setContactIcon] = useState("icon fa-solid fa-envelope fa-xl")
+    let [blogIcon, setBlogIcon] = useState("icon fa-solid fa-pen fa-xl")
 
     let homeElement  = useRef()
     let aboutElement = useRef()
@@ -20,111 +28,123 @@ function Navigation({nav}){
     let blogElement = useRef()
     let navigation = useRef()
 
+    function handleIconSwitch(){
+
+        if(previousElement) {
+
+            let updatedIcon;
+
+            switch(previousElement) {
+                case homeElement.current:
+                  updatedIcon = houseIcon.replace("fa-house-chimney", "fa-house")
+                  setHouseIcon(updatedIcon)
+                  break;
     
-
-    window.onscroll = function(ev) {
-
-      
-        if ((window.scrollY + window.innerHeight + 100) >= document.body.scrollHeight && window.location.toString().includes("projects")) {
-            navigation.current.classList.add('slide-off')
-        }
-        else {
-            navigation.current.classList.remove('slide-off')
-        }
-    };
-   
-    function handleClick(e){
-
-        if(previousElement){
-            if(previousElement === homeElement.current){
-               
-                homeElement.current.firstElementChild.classList.remove("fa-house-chimney")
-            }
-            else if(previousElement === aboutElement.current){
-              
-                aboutElement.current.firstElementChild.classList.remove("fa-user-tie")
-            }
-            else if(previousElement === projectsElement.current){
+                case aboutElement.current:
+                  updatedIcon = aboutIcon.replace("fa-user-tie", "fa-user")
+                  setAboutIcon(updatedIcon)
+                  break;
+    
+                case projectsElement.current:
+                  updatedIcon = projectsIcon.replace("fa-folder-open", "fa-folder")
+                  setProjectsIcon(updatedIcon)
+                  break;
+    
+                case contactElement.current:
+                  updatedIcon = contactIcon.replace("fa-envelope-circle-check", "fa-envelope")
+                  setContactIcon(updatedIcon)
+                  break;
+    
+                case blogElement.current:
+                  updatedIcon = blogIcon.replace("fa-pen-to-square", "fa-pen")
+                  setBlogIcon(updatedIcon)
+                  break;
                 
-                projectsElement.current.firstElementChild.classList.remove("fa-folder-open")
-            }
-            else if(previousElement === contactElement.current){
-               
-                contactElement.current.firstElementChild.classList.remove("fa-envelope-circle-check")
-            }
-            else if(previousElement === blogElement.current){
-                blogElement.current.firstElementChild.classList.remove("fa-pen-to-square")
-            }
-        }
-
-        if(e.target.classList.contains("home")){
-            homeElement.current.firstElementChild.classList.add("fa-house-chimney")
-            previousElement = homeElement.current
-            nav.current.style.transform = `translateX(${homeElement.current.getBoundingClientRect().left}px)`
-        }
-        else if(e.target.classList.contains("about")){
-            aboutElement.current.firstElementChild.classList.add("fa-user-tie")
-            previousElement = aboutElement.current
-            nav.current.style.transform = `translateX(${aboutElement.current.getBoundingClientRect().left}px)`
-        }
-        else if(e.target.classList.contains("projects")){
-            projectsElement.current.firstElementChild.classList.add("fa-folder-open")
-            previousElement = projectsElement.current
-            nav.current.style.transform = `translateX(${projectsElement.current.getBoundingClientRect().left}px)`
-        }
-        else if(e.target.classList.contains("contact")){
-            contactElement.current.firstElementChild.classList.add("fa-envelope-circle-check")
-            previousElement = contactElement.current
-            nav.current.style.transform = `translateX(${contactElement.current.getBoundingClientRect().left}px)`
-        }
-        else if(e.target.classList.contains("blog")){
-            blogElement.current.firstElementChild.classList.add("fa-pen-to-square")
-            previousElement = blogElement.current
-            nav.current.style.transform = `translateX(${blogElement.current.getBoundingClientRect().left}px)`
+                default:
+                  // code block
+              }
         }
     }
 
-   
+ 
+    function handleHomeClick() {
+        handleIconSwitch()
+        let onClickHomeIcon = "icon fa-solid fa-house-chimney fa-xl"
+        setHouseIcon(onClickHomeIcon)
+        previousElement = homeElement.current
+        nav.current.style.transform = `translateX(${homeElement.current.parentElement.getBoundingClientRect().left}px)`
+    }
+
+    function handleAboutClick() {
+        handleIconSwitch()
+        let onClickAboutIcon = "icon fa-solid fa-user-tie fa-xl"
+        setAboutIcon(onClickAboutIcon)
+        previousElement = aboutElement.current
+        nav.current.style.transform = `translateX(${aboutElement.current.parentElement.getBoundingClientRect().left}px)`
+    }
+
+    function handleProjectsClick() {
+        handleIconSwitch()
+        let onClickProjectsIcon = "icon fa-solid fa-folder-open fa-xl"
+        setProjectsIcon(onClickProjectsIcon)
+        previousElement = projectsElement.current
+        nav.current.style.transform = `translateX(${projectsElement.current.parentElement.getBoundingClientRect().left}px)`
+    }
+
+    function handleContactClick() {
+        handleIconSwitch()
+        let onClickContactIcon = "icon fa-solid fa-envelope-circle-check fa-xl"
+        setContactIcon(onClickContactIcon)
+        previousElement = contactElement.current
+        nav.current.style.transform = `translateX(${contactElement.current.parentElement.getBoundingClientRect().left}px)`
+    }
+
+    function handleBlogClick() {
+        handleIconSwitch()
+        let onClickBlogIcon = "icon fa-solid fa-pen-to-square fa-xl"
+        setBlogIcon(onClickBlogIcon)
+        previousElement = blogElement.current
+        nav.current.style.transform = `translateX(${blogElement.current.parentElement.getBoundingClientRect().left}px)`
+    }
+
+
     return (
 
     <div ref={navigation} className="navigation">
-
-         <Link onClick={handleClick}  className="nav-item" to="/">
-            <div  ref={homeElement}   className="home">
-                <i className={houseIcon}></i>
-                <p className='home'>Home</p>
+            <div className="nav-item">
+                <Link onClick={handleHomeClick} className="cursor" to="/">
+                    <i ref={homeElement} className={houseIcon}></i>
+                    <p>Home</p>
+                </Link>
             </div>
-        </Link>
-
-        <Link onClick={handleClick}  className='nav-item' to="/about">
-            <div ref={aboutElement} className="about" >
-                <i className={aboutIcon}></i>
-                <p className='about'>About</p>
+      
+            <div className="nav-item" >
+                <Link  onClick={handleAboutClick}  className='cursor' to="/about">
+                    <i ref={aboutElement} className={aboutIcon}></i>
+                    <p>About</p>
+                </Link>
             </div>
-        </Link>
-
-        <Link onClick={handleClick} className='nav-item' to="/projects">
-            <div  ref={projectsElement} className="projects">
-                <i className={projectsIcon}></i>
-                <p className='projects'>Projects</p>
-                
+     
+            <div className="nav-item">
+                <Link onClick={handleProjectsClick} className='cursor' to="/projects">
+                    <i ref={projectsElement} className={projectsIcon}></i>
+                    <p>Projects</p>
+                </Link>
             </div>
-        </Link>
-
-        <Link onClick={handleClick} className='nav-item' to="/contact">
-            <div  ref={contactElement} className="contact">
-                <i className={contactIcon}></i>
-                <p className='contact'>Contact</p>
-                
+       
+            <div className="nav-item">
+                <Link onClick={handleContactClick} className='cursor' to="/contact">
+                    <i ref={contactElement} className={contactIcon}></i>
+                    <p>Contact</p>
+                </Link>
             </div>
-        </Link>
-
-        <Link onClick={handleClick} className='nav-item' to="/blog">
-            <div  ref={blogElement} className="blog">
-                <i className={blogIcon}></i>
-                <p className='blog'>Blog</p>
+      
+            <div className="nav-item">
+                <Link onClick={handleBlogClick} className='cursor' to="/blog">
+                    <i  ref={blogElement} className={blogIcon}></i>
+                    <p>Blog</p>
+                </Link>
             </div>
-        </Link>
     </div>
   
     )
