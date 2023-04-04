@@ -139,12 +139,12 @@ function Navigation({nav}){
                 </Link>
             </div>
       
-            <div className="nav-item">
+            {/* <div className="nav-item">
                 <Link onClick={handleBlogClick} className='cursor' to="/blog">
                     <i  ref={blogElement} className={blogIcon}></i>
                     <p>Blog</p>
                 </Link>
-            </div>
+            </div> */}
     </div>
   
     )
