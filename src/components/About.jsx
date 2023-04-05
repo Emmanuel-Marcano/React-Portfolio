@@ -6,36 +6,10 @@ import alphabet from '../assets/alphabet.avif'
 import graduation from '../assets/diploma.png'
 import certification from '../assets/certification.png'
 
-let visibleDip;
-
-
-
-// let observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-  
-//       if(entry.isIntersecting){
-//         entry.target.classList.add('appear')
-//       } else{
-//         entry.target.classList.remove('appear')
-//       }
-  
-//     })
-//   })
-  
-  
-//   let hiddenElements = document.querySelectorAll('.hidden-el')
-//   hiddenElements.forEach((el) => {
-//     observer.observe(el)
-//   })
-
-
-
-
 
 function About(){
 
     let {ref: diplomaRef, inView: diplomaIsVisible} = useInView()
-   
     let {ref: certRef, inView: certIsVisible} = useInView()
 
     return (
@@ -44,10 +18,14 @@ function About(){
             <div className="content-container">
                 <div className="about-showcase">
                     <div className="about-text">
-                        <div className="about-header-container">
-                            <p className="about-pr">orn in Puerto Rico</p>
-                            <p className="about-ams">ased in Amsterdam</p>
-                        </div>
+
+                        <h1>about.</h1>
+
+                        <span>Born in Puerto Rico. Currently based in Amsterdam, Netherlands</span>
+                       
+                        {/* <h2>Born in Puerto Rico. <br /> Based in Amsterdam.</h2> */}
+                        
+
                         <p>Since 2020, I've enjoyed turning complex problems into simple, attractive and intuitive designs.
                             When I'm not coding, you'll find me drinking coffee at the nearest cafe, making fun of the latest
                             Netflix reality show alongside my girlfriend or working out.
@@ -110,7 +88,7 @@ function About(){
 
 
             <div  className="developer-journey">
-                <div className="section-header lines">Timeline of my software development journey</div>
+                {/* <div className="section-header lines">Timeline of my software development journey</div> */}
                 <div className="content-container grid">
                     <div  className="journey-text">
                         <h1>Computer Sciente Graduate</h1>

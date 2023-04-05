@@ -1,5 +1,5 @@
-import card from '../assets/business-card1.png'
-import card2 from '../assets/business-card2.png'
+// import card from '../assets/business-card1.png'
+// import card2 from '../assets/business-card2.png'
 
 function Contact(){
 
@@ -18,12 +18,12 @@ function Contact(){
                 <div className="contact-cards">
 
                     <div className="card linkedin-card">
-                        <img src={card} alt="" />
+                        {/* <img src={card} alt="" /> */}
 
                     </div>
 
                     <div className="card github-card">
-                        <img src={card2} alt="" />
+                        {/* <img src={card2} alt="" /> */}
 
                         
                     </div>
