@@ -123,6 +123,7 @@ function Navigation({nav}){
         let onClickHomeIcon = "icon fa-solid fa-house-chimney fa-xl"
         setHouseIcon(onClickHomeIcon)
         previousElement = homeElement.current
+        nav.current.style.width = `${homeElement.current.parentElement.parentElement.clientWidth}px`
         nav.current.style.transform = `translateX(${homeElement.current.parentElement.getBoundingClientRect().left}px)`
     }
 
@@ -131,6 +132,7 @@ function Navigation({nav}){
         let onClickAboutIcon = "icon fa-solid fa-user-tie fa-xl"
         setAboutIcon(onClickAboutIcon)
         previousElement = aboutElement.current
+        nav.current.style.width = `${aboutElement.current.parentElement.parentElement.clientWidth}px`
         nav.current.style.transform = `translateX(${aboutElement.current.parentElement.getBoundingClientRect().left}px)`
     }
 
@@ -139,6 +141,7 @@ function Navigation({nav}){
         let onClickProjectsIcon = "icon fa-solid fa-folder-open fa-xl"
         setProjectsIcon(onClickProjectsIcon)
         previousElement = projectsElement.current
+        nav.current.style.width = `${projectsElement.current.parentElement.parentElement.clientWidth}px`
         nav.current.style.transform = `translateX(${projectsElement.current.parentElement.getBoundingClientRect().left}px)`
     }
 
@@ -147,6 +150,7 @@ function Navigation({nav}){
         let onClickContactIcon = "icon fa-solid fa-envelope-circle-check fa-xl"
         setContactIcon(onClickContactIcon)
         previousElement = contactElement.current
+        nav.current.style.width = `${contactElement.current.parentElement.parentElement.clientWidth}px`
         nav.current.style.transform = `translateX(${contactElement.current.parentElement.getBoundingClientRect().left}px)`
     }
 

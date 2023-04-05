@@ -19,6 +19,14 @@ function Projects(){
 
     return (
 
+     
+
+        <div className='content-container'>
+
+            <h1 className='h1'>projects.</h1>
+
+
+
         <div className='project-grid'>
 
             <div className="project" id='eth'>
@@ -66,6 +74,8 @@ function Projects(){
                 <p className='overlay'>VIEW PROJECT</p>
             </div>
         </div>
+
+        </div> 
     )
 }
 

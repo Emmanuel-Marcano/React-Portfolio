@@ -19,9 +19,9 @@ function About(){
                 <div className="about-showcase">
                     <div className="about-text">
 
-                        <h1>about.</h1>
+                        <h1 className="h1">about.</h1>
 
-                        <span>Born in Puerto Rico. Currently based in Amsterdam, Netherlands</span>
+                        <span>Born in Puerto Rico. Currently based in Amsterdam, Netherlands.</span>
                        
                         {/* <h2>Born in Puerto Rico. <br /> Based in Amsterdam.</h2> */}
                         
@@ -116,7 +116,7 @@ function About(){
                         <p>After graduation i concluded that i wanted to specialize in Front-End Development. 
                             As i also wanted to learn React along the way, i decided to take a course taught by Meta engineers 
                             that covers everything there is to learn about Front-End Development 
-                            including React
+                            including React.
                         </p>
                         <a target="_blank" className="btn" href="https://www.coursera.org/account/accomplishments/professional-cert/PQSHJAE7PV8N">View Certificate</a>
                     </div>
@@ -134,7 +134,7 @@ function About(){
                         <p>My education along with the experience gained creating personal projects
                             gives me the confidence to feel qualified to bring my abilities to a 
                             proffessional environment where i can tackle any problem for the 
-                            benefit of the company and effectively solve it through code
+                            benefit of the company and effectively solve it through code.
                         </p>
                         <a className="btn" href="">Hire me</a>
                     </div>
