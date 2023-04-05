@@ -31,47 +31,47 @@ function Projects(){
 
             <div className="project" id='eth'>
                 <img src={eth} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
 
             <div className="project" id='alphabet'>
                 <img src={alphabet} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
 
             <div className="project" id='traveler'>
                 <img src={traveler} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
 
             <div className="project" id='cube'>
                 <img src={cube} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
 
             <div className="project" id='astro'>
                 <img src={astro} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
 
             <div className="project" id='cup'>
                 <img src={cup} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
 
             <div className="project" id='insta'>
                 <img src={insta} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
 
             <div className="project" id='foam'>
                 <img src={foam} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
 
             <div className="project" id='dimensional'>
                 <img src={dimensional} alt="" />
-                <p className='overlay'>VIEW PROJECT</p>
+                <div className='overlay'>VIEW PROJECT</div>
             </div>
         </div>
 

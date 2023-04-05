@@ -1,9 +1,4 @@
 
-@import url('https://fonts.cdnfonts.com/css/inner-vintage');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
-                
 
 :root {
   --bg-color: #f6f9fc;
@@ -11,8 +6,8 @@
   --accentColor: #333333;
   --typewriterSpeed: 1s;
   --typewriterCharacters: 5;
-  --desktopFontSize: 18px;
-  --mobileFontSize: 17px;
+  --desktopFontSize: 20px;
+  --mobileFontSize: 18px;
   --animationSpeed: 1s;
 }
 
@@ -24,7 +19,7 @@
 }
 
 html {
-  scrollbar-color: dark;
+  
  
 }
 
@@ -83,7 +78,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 .content-container {
   width: 85%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -125,10 +120,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 .h1{
   margin: 10px 0;
   margin-top: 0;
-  
   font-size: 70px;
-
-
 }
 
 
@@ -145,8 +137,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   bottom: 0;
   transition: transform 0.5s ease;
   z-index: 5;
-  /* font-weight: 300; */
-
 }
 
 .nav-item {
@@ -170,14 +160,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   transition: transform 0.3s ease;
   border-radius: 3px;
 }
-/* 
-.icon {
-  transition: color 0.5s ease;
-  color:#555555;
-
-  color: white;
-} */
-
 
 
 /********************************  Homepage  *********************************/
@@ -285,21 +267,10 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 
-
-
 .about-text span  {
   color:#757575;
   font-size: 24px;
   font-weight: 300;
- 
-
-
-}
-.about-text h1  {
- 
- 
-
-
 }
 
 .about-images{
@@ -309,13 +280,9 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 
-.image-grid {
 
+.image-grid {
   width: max-content;
-  margin: 0 auto;
-}
-
-.image-grid {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 150px 150px;
@@ -362,14 +329,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 
 
-.skills-graph{
- 
-  /* border: 1px solid black; */
-
-
-}
-
-
 
 .skills-graphic {
   margin: auto;
@@ -382,7 +341,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   background-blend-mode: screen;
   border-radius: 50%;
   position: relative;
-   overflow: hidden; 
+  overflow: hidden; 
   color: white;
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -617,12 +576,13 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 .project {
   opacity: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .project .overlay {
-  opacity: 0;
+  /* opacity: 0; */
   background-color: rgba(255,255,255,0.1);
-  margin: 0;
+  background-color: rgb(255, 255, 255,0.5);
   position: absolute;
   top: 0;
   left:0;
@@ -634,22 +594,23 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 2px;
-  transition: 0.2s ease;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
 }
 
-.project .overlay:hover {
+.project:hover .overlay{
+  transform: translateY(0);
+  cursor: pointer;
+
+
+}
+
+/* .project .overlay:hover {
   opacity: 1;
   cursor: pointer;
-}
-
-
-/* .project-grid::after{
-  content: "";
-  display: block;
-  width: 100%;
-  height: 150px;
-
+  transform: translateY(0);
 } */
+
 
 .project:nth-child(1){
   animation: show 0.3s ease forwards;
@@ -769,7 +730,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   transform: translateX(100%);
   width: max-content;
   margin-left: auto;
-  
   right: -80px;
   animation: slide-in-from-left var(--animationSpeed) ease forwards;
   margin-top: 20px;
@@ -787,7 +747,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 .card {
   width: 430px;
-  height: 200px;
+  height: 160px;
   /* padding: 10px; */
   background-color: white;
   border-radius: 10px;
@@ -957,6 +917,10 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 .order2{
   order: 1;
+}
+
+.card {
+  height: 200px;
 }
 
 
