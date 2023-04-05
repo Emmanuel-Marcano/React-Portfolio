@@ -6,14 +6,65 @@ let previousElement;
 
 function Navigation({nav}){
 
+    // window.onscroll = function() {
+    //     if ((window.scrollY + window.innerHeight + 100) >= document.body.scrollHeight && window.location.toString().includes("projects")) {
+    //         navigation.current.classList.add('slide-off')
+    //     }
+    //     else {
+    //         navigation.current.classList.remove('slide-off')
+    //     }
+    // };
+
+    
     window.onscroll = function() {
-        if ((window.scrollY + window.innerHeight + 100) >= document.body.scrollHeight && window.location.toString().includes("projects")) {
-            navigation.current.classList.add('slide-off')
-        }
-        else {
-            navigation.current.classList.remove('slide-off')
-        }
+      
+
+
+
+        navigation.current.classList.add('slide-off')
+       
+        
+           
+        
     };
+
+    const onScrollStop = callback => {
+        let isScrolling;
+        window.addEventListener(
+          'scroll',e => {
+
+            clearTimeout(isScrolling);
+
+            isScrolling = setTimeout(() => {
+              callback();
+            }, 1500);
+          },
+          false
+        );
+      };
+
+      onScrollStop(function(){
+
+        navigation.current.classList.remove('slide-off')
+
+
+      })
+
+
+
+    // if(window.onscroll){
+    //     navigation.current.classList.add('slide-off')
+
+
+    // }
+    // else{
+    //     navigation.current.classList.remove('slide-off')
+
+
+    // }
+
+
+
 
     let [houseIcon, setHouseIcon] = useState("icon fa-solid fa-house fa-xl")
     let [aboutIcon, setAboutIcon] = useState("icon fa-solid fa-user fa-xl")
