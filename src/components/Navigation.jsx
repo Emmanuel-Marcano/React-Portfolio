@@ -6,26 +6,15 @@ let previousElement;
 
 function Navigation({nav}){
 
-    // window.onscroll = function() {
-    //     if ((window.scrollY + window.innerHeight + 100) >= document.body.scrollHeight && window.location.toString().includes("projects")) {
-    //         navigation.current.classList.add('slide-off')
-    //     }
-    //     else {
-    //         navigation.current.classList.remove('slide-off')
-    //     }
-    // };
+  let [navClassname, setNavClassname] = useState('navigation')
 
-    
+   
+
     window.onscroll = function() {
-      
-
-
-
-        navigation.current.classList.add('slide-off')
+        
+        setNavClassname("navigation slide-off")
        
-        
-           
-        
+         
     };
 
     const onScrollStop = callback => {
@@ -45,23 +34,11 @@ function Navigation({nav}){
 
       onScrollStop(function(){
 
-        navigation.current.classList.remove('slide-off')
+        
+        setNavClassname("navigation")
 
 
       })
-
-
-
-    // if(window.onscroll){
-    //     navigation.current.classList.add('slide-off')
-
-
-    // }
-    // else{
-    //     navigation.current.classList.remove('slide-off')
-
-
-    // }
 
 
 
@@ -165,7 +142,7 @@ function Navigation({nav}){
 
     return (
 
-    <div ref={navigation} className="navigation">
+    <div ref={navigation} className={navClassname}>
             <div className="nav-item">
                 <Link onClick={handleHomeClick} className="cursor" to="/">
                     <i ref={homeElement} className={houseIcon}></i>

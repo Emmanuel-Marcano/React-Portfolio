@@ -1,6 +1,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import {useInView} from "react-intersection-observer"
+import Footer from "./Footer"
 
 import alphabet from '../assets/alphabet.avif'
 import graduation from '../assets/diploma.png'
@@ -13,7 +14,9 @@ import workout from '../assets/working-out.jpg'
 
 function About(){
 
-    let {ref: diplomaRef, inView: diplomaIsVisible} = useInView()
+    let {ref: diplomaRef, inView: diplomaIsVisible} = useInView({
+        
+    })
     let {ref: certRef, inView: certIsVisible} = useInView()
 
     return (
@@ -155,6 +158,8 @@ function About(){
 
 
             </div>
+
+            <Footer/>
 
 
 
