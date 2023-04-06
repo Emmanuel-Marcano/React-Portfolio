@@ -5,6 +5,10 @@ import {useInView} from "react-intersection-observer"
 import alphabet from '../assets/alphabet.avif'
 import graduation from '../assets/diploma.png'
 import certification from '../assets/certification.png'
+import remolino from '../assets/remolino.jpg'
+import ams from '../assets/ams.jpg'
+import setUp from '../assets/set-up.jpg'
+import workout from '../assets/working-out.jpg'
 
 
 function About(){
@@ -23,7 +27,7 @@ function About(){
 
                         <span>Born in Puerto Rico. Currently based in Amsterdam, Netherlands.</span>
                        
-                        {/* <h2>Born in Puerto Rico. <br /> Based in Amsterdam.</h2> */}
+                        
                         
 
                         <p>Since 2020, I've enjoyed turning complex problems into simple, attractive and intuitive designs.
@@ -34,19 +38,19 @@ function About(){
                     <div className="about-images">
                         <div className="image-grid">
                             <div className="about-img">
-                                <img src={alphabet} alt="" />
+                                <img src={ams} alt="" />
                             </div>
 
                             <div className="about-img">
-                                <img src={alphabet} alt="" />
+                                <img src={workout} alt="" />
                             </div>
 
                             <div className="about-img">
-                                <img src={alphabet} alt="" />
+                                <img src={setUp} alt="" />
                             </div>
 
                             <div className="about-img">
-                                <img src={alphabet} alt="" />
+                                <img src={remolino} alt="" />
                             </div>
                         </div>
                     </div>
