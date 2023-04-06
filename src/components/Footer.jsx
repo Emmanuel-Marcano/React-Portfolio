@@ -1,19 +1,18 @@
-
+import {useInView} from "react-intersection-observer"
 
 
 function Footer(){
 
-    function topFunction() {
-        // document.body.scrollTop = 0;
-        // document.documentElement.scrollTop = 0;
+    let {ref: footerRef, inView: footerIsVisible} = useInView()
 
+    function topFunction() {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }
 
 
     return (
-        <footer className="footer">
-            <div onClick={topFunction} className="footer-circle">
+        <footer ref={footerRef} className="footer">
+            <div onClick={topFunction} className={`footer-circle ${footerIsVisible && "footer-up"}`}>
             <i className="footer-icon fa-solid fa-chevron-up fa-3x"></i>
 
             
