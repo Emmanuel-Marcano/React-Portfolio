@@ -486,13 +486,12 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   position: relative;
   bottom: -75px;
   transform: translateY(70%);
-  
   transition: transform 0.8s ease;
   opacity: 0;
 }
 
 .long-height{
-  height: 2000px;
+  height: 1000px;
 }
 
 .appear {
@@ -772,8 +771,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 .footer-icon{
   position: relative;
   bottom: 30px;
-  color: #757575;
-  
+  color: rgb(117, 117, 117, 0.5);
 }
 
 .footer-circle:hover {

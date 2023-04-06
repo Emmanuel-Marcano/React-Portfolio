@@ -14,7 +14,7 @@ function Footer(){
     return (
         <footer className="footer">
             <div onClick={topFunction} className="footer-circle">
-            <i className="footer-icon fa-solid fa-arrow-up fa-3x"></i>
+            <i className="footer-icon fa-solid fa-chevron-up fa-3x"></i>
 
             
             </div>

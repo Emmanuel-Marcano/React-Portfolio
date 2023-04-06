@@ -28,7 +28,7 @@ function About(){
 
                         <h1 className="h1">about.</h1>
 
-                        <span>Born in Puerto Rico. Currently based in Amsterdam, Netherlands.</span>
+                        <span> <b> Born </b> in Puerto Rico. <br />  <b> Based </b> in Amsterdam, Netherlands.</span>
                        
                         
                         
