@@ -15,9 +15,13 @@ import workout from '../assets/working-out.jpg'
 function About(){
 
     let {ref: diplomaRef, inView: diplomaIsVisible} = useInView({
+        triggerOnce: true
         
     })
-    let {ref: certRef, inView: certIsVisible} = useInView()
+    let {ref: certRef, inView: certIsVisible} = useInView({
+        triggerOnce: true
+        
+    })
 
     return (
       
