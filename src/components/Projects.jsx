@@ -31,17 +31,66 @@ function Projects(){
 
             <div className="project" id='eth'>
                 <img src={eth} alt="" />
-                <div className='overlay'>VIEW PROJECT</div>
+                <div className='overlay'>
+
+                    <div className='project-details'>
+                        <h2 className='project-title'>Sorting Algorithm Visualizer</h2>
+                        <div className='project-tags'>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <p className='project-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, 
+                            in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis 
+                            fugit obcaecati excepturi non consectetur animi consequuntur?
+                        </p>
+
+                        <a className='btn' href="">View project</a>
+                        <a className='btn' href="">View code</a>
+                    </div>
+                </div>
             </div>
 
             <div className="project" id='alphabet'>
                 <img src={alphabet} alt="" />
-                <div className='overlay'>VIEW PROJECT</div>
+                <div className='overlay'>
+                    <div className='project-details'>
+                            <h2 className='project-title'>Weather application</h2>
+                            <div className='project-tags'>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <p className='project-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, 
+                                in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis 
+                                fugit obcaecati excepturi non consectetur animi consequuntur?
+                            </p>
+
+                            <a className='btn' href="">View project</a>
+                            <a className='btn' href="">View code</a>
+                    </div>
+                </div>
             </div>
 
             <div className="project" id='traveler'>
                 <img src={traveler} alt="" />
-                <div className='overlay'>VIEW PROJECT</div>
+                <div className='overlay'>
+                    <div className='project-details'>
+                                <h2 className='project-title'>Starbucks homepage clone</h2>
+                                <div className='project-tags'>
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <p className='project-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, 
+                                    in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis 
+                                    fugit obcaecati excepturi non consectetur animi consequuntur?
+                                </p>
+
+                                <a className='btn' href="">View project</a>
+                                <a className='btn' href="">View code</a>
+                    </div>
+                </div>
             </div>
 
             <div className="project" id='cube'>
