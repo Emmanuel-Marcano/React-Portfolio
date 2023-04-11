@@ -19,7 +19,7 @@ function App() {
   return (
 
     <BrowserRouter>
-    <div  className="App">
+    <div  className="">
       <div ref={navBar} className="nav-bar"></div>
       <Container>
           <Routes>
@@ -31,7 +31,7 @@ function App() {
           </Routes>
          
           <Navigation nav={navBar}/>
-          </Container>
+       </Container>
     </div>
     </BrowserRouter>
   )

@@ -2,6 +2,8 @@
 function Contact(){
 
     return (
+     
+
         <div className="contact-section">
             <div className="panel">
                 <div className="contact-text">
