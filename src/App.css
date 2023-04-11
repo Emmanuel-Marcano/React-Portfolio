@@ -76,7 +76,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 .content-container {
-  width: 85%;
+  width: 95%;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -256,7 +256,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 .about-showcase {
   min-height: calc(100svh - 105px);
-  padding: 60px 25px;
+  padding: 60px 0px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 60px;
@@ -337,46 +337,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 }
 
-.css-done{
-  position: absolute;
-  bottom: -40px;
-  right: 50px;
-  color: #333333;
-}
-
-.skills-graphic span{
-  transition: transform 1s ease;
-}
-
-.skills-graphic:hover .front{
-  transform: translateX(-20px);
-
-}
-
-.skills-graphic:hover .back{
-  transform: translateX(30px);
-
-}
-.skills-graphic:hover .inner-circle-1{
-  transform: translateY(-30px);
-
-}
-.skills-graphic:hover .inner-circle-2{
-  transform: translateX(30px);
-
-}
-
-.skills-graphic:hover::before{
-  transform: translateX(-30px);
-}
-.skills-graphic:hover::after{
-  transform: translateY(30px);
-}
-
-.skills-graphic:hover{
-  overflow: visible;
-
-}
 
 .skills-graphic::before{
   content: "";
@@ -759,7 +719,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 .card-curve{
   position: absolute;
   top:0;
-  left: -80px;
+  left: -95px;
   background-color: #333333;
   border: 40px;
   height: 100%;
@@ -1062,15 +1022,10 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 .card-curve{
-  position: absolute;
-  /* top:10px; */
   width: 200px;
   height: 200px;
   
 }
-
-
-
 
 
 }

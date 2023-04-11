@@ -92,7 +92,7 @@ function About(){
                         <span className="back">Back</span>
                         <span className="inner-circle-1"></span>
                         <span className="inner-circle-2"></span>
-                        <span className="css-done">Graph Done with CSS</span>     
+                           
                     </div>
                 </div> 
             </div>
