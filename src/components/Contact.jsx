@@ -16,6 +16,17 @@ function Contact(){
                 <div className="contact-cards">
 
                     <div className="card linkedin-card">
+                        <div className="card-curve">
+                            <a className="contact-icons contact-linkedin" href=""> <i className="fa-brands fa-linkedin-in fa-2x"></i></a>
+                            <a className="contact-icons contact-email " href=""> <i className="fa-solid fa-envelope fa-2x"></i></a>
+                            <a className="contact-icons contact-github" href=""> <i className="fa-brands fa-github fa-2x"></i></a>
+                           
+
+
+                        </div>
+
+
+                        
                      
 
                     </div>
