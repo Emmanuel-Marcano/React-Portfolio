@@ -742,6 +742,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   right: -80px;
   animation: slide-in-from-left var(--animationSpeed) ease forwards;
   margin-top: 20px;
+  
  
 }
 
@@ -753,13 +754,12 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   position: relative;
   right: -35px;
   overflow: hidden;
-  
 }
 
 .card-curve{
   position: absolute;
   top:0;
-  left: -60px;
+  left: -80px;
   background-color: #333333;
   border: 40px;
   height: 100%;
@@ -776,7 +776,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   top: 10px;
   right: -20px;
   color:#333333;
-  transform: translateX(-180%);
+  transform: translateX(-220%);
   animation: slide-in-from-left 1s ease forwards;
   animation-delay: 2s;
 
@@ -796,7 +796,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   top: 120px;
   right: -20px;
   color: #333333;
-  transform: translateX(-180%);
+  transform: translateX(-220%);
   animation: slide-in-from-left 1s ease forwards;
   animation-delay: 2.5s;
 }
@@ -950,8 +950,9 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   }
 
   .linkedin-card {
-    position: static;
+    position: relative;
     right:0;
+    overflow: hidden;
 
   }
 
@@ -992,25 +993,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   font-size: 18px;
 }
 
-.lines::before {
-  content: "";
-  position: absolute;
-  display: inline;
-  height: 0.5px;
-  background-color: #757575;
-  width: 200px;
-  transform: translateX(-110%);
-}
 
-.lines::after {
-  content: "";
-  position: absolute;
-  display: inline;
-  height: 0.5px;
-  background-color: #757575;
-  width: 200px;
-  transform: translateX(248%);
-}
 
 .order1{
   order: 2;
@@ -1021,6 +1004,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 .card {
   height: 200px;
+ 
 }
 
 .image-grid {
@@ -1063,6 +1047,26 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   "cup foam"
   "dimensional  dimensional";
 
+}
+
+
+
+.contact-email{
+  top: 80px;
+
+
+}
+
+.contact-github {
+  top: 155px;
+}
+
+.card-curve{
+  position: absolute;
+  /* top:10px; */
+  width: 200px;
+  height: 200px;
+  
 }
 
 
