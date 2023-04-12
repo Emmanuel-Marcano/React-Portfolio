@@ -8,8 +8,37 @@ import insta from '../assets/insta.avif'
 import foam from '../assets/foam.avif'
 import dimensional from '../assets/dimensional.avif'
 
+import ProjectDetails from './ProjectDetails'
+
 
 import { useState } from 'react'
+
+// let projectInfo = [
+
+
+
+// ]
+
+let algoVisualizer = {
+    title: "Sorting Algorithm Visualizer",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis fugit obcaecati excepturi non consectetur animi consequuntur?"
+}
+
+let weatherApp = {
+    title: "Weather Application",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis fugit obcaecati excepturi non consectetur animi consequuntur?"
+}
+
+let starbucksClone = {
+    title: "Starbucks Homepage Clone",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis fugit obcaecati excepturi non consectetur animi consequuntur?"
+}
+
+
+
+
+
+
 
 
 
@@ -19,44 +48,39 @@ import { useState } from 'react'
 function Projects(){
 
     let [showVisualizer, setShowVisualizer] = useState(false)
+    let [showWeatherApp, setShowWeatherApp] = useState(false)
+    let [showStarbucksPage, setStarbucksPage] = useState(false)
 
-    function handleProjectDetails(){
-
+    function handleVisualizer(){
         setShowVisualizer(!showVisualizer)
-
-
-
-
-
     }
 
-    function closeModal(){
+    function handleWeatherApp(){
+        setShowWeatherApp(!showWeatherApp)
+    }
+
+    function handleStarbucksPage(){
+        setStarbucksPage(!showStarbucksPage)
+    }
+
+
+
+
+    function closeVisualizerModal(){
         setShowVisualizer(!showVisualizer)
+    }
 
+    function closeWeatherAppModal(){
+        setShowWeatherApp(!showWeatherApp)
+    }
 
-
+    function closeStarbucksModal(){
+        setStarbucksPage(!setStarbucksPage)
     }
 
     console.log(showVisualizer)
 
-    let projectDetails =  <div className="project-details-overlay">
-    <div className='project-details'>
-                <button onClick={closeModal}>X</button>
-                <h2 className='project-title'>Sorting Algorithm Visualizer</h2>
-                <div className='project-tags'>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <p className='project-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, 
-                    in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis 
-                    fugit obcaecati excepturi non consectetur animi consequuntur?
-                </p>
-
-                <a className='btn' href="">View project</a>
-                <a className='btn' href="">View code</a>
-    </div>
-</div>
+   
 
     
 
@@ -66,9 +90,11 @@ function Projects(){
 
             <h1 className='h1'>projects.</h1>
 
-            {/* className={`project-details-overlay ${showVisualizer? "displayBlock": null}`} */}
+            
 
-            {showVisualizer && projectDetails}
+            {showVisualizer && <ProjectDetails title = {algoVisualizer.title} description = {algoVisualizer.description} closeModal = {closeVisualizerModal}/>}
+            {showWeatherApp && <ProjectDetails title = {weatherApp.title} description = {weatherApp.description} closeModal={closeWeatherAppModal}/>}
+            {showStarbucksPage && <ProjectDetails title = {starbucksClone.title} description = {starbucksClone.description} closeModal={closeStarbucksModal}/>}
 
             
 
@@ -84,7 +110,7 @@ function Projects(){
 
             
                       
-                        <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                        <span onClick={handleVisualizer} className='btn'>VIEW PROJECT</span>
                  
 
                  
@@ -95,14 +121,14 @@ function Projects(){
             <div className="project" id='alphabet'>
                 <img src={alphabet} alt="" />
                 <div className='overlay'>
-                   <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                   <span onClick={handleWeatherApp} className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
 
             <div className="project" id='traveler'>
                 <img src={traveler} alt="" />
                 <div className='overlay'>
-                    <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                    <span onClick={handleStarbucksPage}  className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
 
@@ -111,7 +137,7 @@ function Projects(){
                 <div className='overlay'>
                     
                     
-                <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                <span  className='btn'>VIEW PROJECT</span>
                     
                     </div>
             </div>
@@ -120,35 +146,35 @@ function Projects(){
                 <img src={astro} alt="" />
                 <div className='overlay'>
                     
-                   <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                   <span  className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
 
             <div className="project" id='cup'>
                 <img src={cup} alt="" />
                 <div className='overlay'>
-                <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                <span className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
 
             <div className="project" id='insta'>
                 <img src={insta} alt="" />
                 <div className='overlay'>
-                <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                <span  className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
 
             <div className="project" id='foam'>
                 <img src={foam} alt="" />
                 <div className='overlay'>
-                <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                <span className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
 
             <div className="project" id='dimensional'>
                 <img src={dimensional} alt="" />
                 <div className='overlay'>
-                <span onClick={handleProjectDetails} className='btn'>VIEW PROJECT</span>
+                <span  className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
         </div>
