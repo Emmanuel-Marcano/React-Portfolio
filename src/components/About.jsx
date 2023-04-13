@@ -3,13 +3,14 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import {useInView} from "react-intersection-observer"
 import Footer from "./Footer"
 
-import alphabet from '../assets/alphabet.avif'
+
 import graduation from '../assets/diploma.png'
 import certification from '../assets/certification.png'
-import remolino from '../assets/remolino.jpg'
 import ams from '../assets/ams.jpg'
 import setUp from '../assets/set-up.jpg'
 import workout from '../assets/working-out.jpg'
+import cooking from '../assets/cooking.jpg'
+import puertoRico from '../assets/PR.jpg'
 
 
 function About(){
@@ -38,8 +39,8 @@ function About(){
                         
 
                         <p>Since 2020, I've enjoyed turning complex problems into simple, attractive and intuitive designs.
-                            When I'm not coding, you'll find me drinking coffee at the nearest cafe, making fun of the latest
-                            Netflix reality show alongside my girlfriend or working out.
+                            When I'm not coding, you'll find me cooking a new food recipe at home with a drink in hand, making fun of the latest
+                            Netflix reality show alongside my girlfriend, having a coffee at the nearest dutch cafe or working out.
                         </p>
                     </div>
                     <div className="about-images">
@@ -53,11 +54,11 @@ function About(){
                             </div>
 
                             <div className="about-img">
-                                <img src={setUp} alt="" />
+                                <img src={cooking} alt="" />
                             </div>
 
                             <div className="about-img">
-                                <img src={remolino} alt="" />
+                                <img src={puertoRico} alt="" />
                             </div>
                         </div>
                     </div>
@@ -151,7 +152,7 @@ function About(){
                     </div>
 
                     <div className="journey-image">
-                        <img src={alphabet} alt="" />
+                        <img src={setUp} alt="" />
                     </div>    
                 </div>
             </div>

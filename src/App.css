@@ -548,10 +548,10 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 
 .project-details {
-  padding: 30px 15px;
+  padding: 20px 15px;
   padding-top: 20px;
   background-color: white;
-  width: 90%;
+  width: 80%;
   max-width: 500px;
   border-radius: 5px;
   /* display: flex;
@@ -571,6 +571,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 .project-title {
   font-size: 20px;
   margin-bottom: 5px;
+  margin-top: 12px;
 }
 
 .project-tags{

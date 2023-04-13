@@ -7,6 +7,9 @@ import cup from '../assets/cup.avif'
 import insta from '../assets/insta.avif'
 import foam from '../assets/foam.avif'
 import dimensional from '../assets/dimensional.avif'
+import visualizerImg from '../assets/visualizer.png'
+import weatherAppImg from '../assets/weatherapp.png'
+import littleLemon from '../assets/littlelemon.png'
 
 import ProjectDetails from './ProjectDetails'
 import { useState } from 'react'
@@ -89,7 +92,7 @@ function Projects(){
         <div className='project-grid'>
 
             <div className="project" id='eth'>
-                <img src={eth} alt="" />
+                <img src={visualizerImg} alt="" />
                 <div className='overlay'>
                         <h1>Sorting Algorithm Visualizer</h1>
                         <span onClick={handleVisualizer} className='btn'>VIEW PROJECT</span>
@@ -97,7 +100,7 @@ function Projects(){
             </div>
 
             <div className="project" id='alphabet'>
-                <img src={alphabet} alt="" />
+                <img src={weatherAppImg} alt="" />
                 <div className='overlay'>
                 <h1>Weather Application</h1>
                    <span onClick={handleWeatherApp} className='btn'>VIEW PROJECT</span>
@@ -105,7 +108,7 @@ function Projects(){
             </div>
 
             <div className="project" id='traveler'>
-                <img src={traveler} alt="" />
+                <img src={littleLemon} alt="" />
                 <div className='overlay'>
 
                     <h1>Starbucks</h1>
