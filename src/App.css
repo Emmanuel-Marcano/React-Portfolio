@@ -317,6 +317,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 
 .skills-graphic {
+  opacity: 0;
   margin: auto;
   width: 300px;
   height: 300px;
@@ -332,6 +333,8 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transform: translateY(110%);
+  transition: transform 1s ease;
  
 
 }
@@ -493,7 +496,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 
 .project {
-  opacity: 0;
   position: relative;
   overflow: hidden;
 }
@@ -510,7 +512,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 .project .overlay {
-  /* opacity: 0; */
   background-color: rgba(255,255,255,0.1);
   background-color: rgb(255, 255, 255,0.5);
   position: absolute;
@@ -525,7 +526,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   font-size: 10px;
   transition: transform 0.3s ease;
   transform: translateY(150%);
-  
 }
 
 .project-details-overlay {
@@ -543,6 +543,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 
 .project-details {
+  position: relative;
   padding: 20px 15px;
   padding-top: 20px;
   background-color: white;
@@ -554,25 +555,49 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 }
 
-.project-details button {
+.project-details i {
   display: block;
+  position: absolute;
+  top:-10px;
+  right: -10px;
   margin-left: auto;
-  border: 1px solid black;
   cursor: pointer;
-  border-radius: 3px;
 
+  width: max-content;
+
+}
+
+.project-details i:hover{
+  color: red;
 }
 
 .project-title {
   font-size: 22px;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 2px;
 }
 
 .project-tags{
+  position: relative;
   display: flex;
   gap: 5px;
   font-size: 12px;
+
+}
+
+.project-tags::after{
+  content: "";
+  background-color: #333333;
+  width: 115px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  bottom: -25px;
+  left: 5px;
+  border-radius: 3px;
+
+
+
 }
 
 .project-tags span{
@@ -585,6 +610,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 .project-description {
   font-size: 14px;
+  margin-top: 40px;
 }
 
 .project-details-overlay .btn {
@@ -606,41 +632,6 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 } */
 
 
-.project:nth-child(1){
-  animation: show 0.3s ease forwards;
-}
-.project:nth-child(2){
-  animation: show 1s ease forwards;
-  animation-delay: 0.7s;
-}
-.project:nth-child(3){
-  animation: show 1s ease forwards;
-  animation-delay: 0.5s;
-}
-.project:nth-child(4){
-  animation: show 1s ease forwards;
-  animation-delay: 0.2s;
-}
-.project:nth-child(5){
-  animation: show 1s ease forwards;
-  animation-delay: 0.1s;
-}
-.project:nth-child(6){
-  animation: show 1s ease forwards;
-  animation-delay: 0.6s;
-}
-.project:nth-child(7){
-  animation: show 1s ease forwards;
-  animation-delay: 0.4s;
-}
-.project:nth-child(8){
-  animation: show 1s ease forwards;
-  animation-delay: 0.7s;
-}
-.project:nth-child(9){
-  animation: show 1s ease forwards;
-  animation-delay: 0.8s;
-}
 
 #visualizer{
   grid-area: visualizer;
@@ -664,11 +655,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 
-@keyframes show {
-  100%{
-    opacity: 1;
-  }
-}
+
 
 .slide-off {
   transform: translateY(100%);
@@ -1034,6 +1021,8 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   height: 200px;
   
 }
+
+
 
 
 }

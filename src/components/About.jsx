@@ -24,6 +24,11 @@ function About(){
         
     })
 
+    let {ref: graphRef, inView: graphIsVisible} = useInView({
+        triggerOnce: true
+        
+    })
+
     return (
       
        <div className="about-section">
@@ -88,7 +93,7 @@ function About(){
                </div>
 
                 <div className="skills-graph">
-                    <div  className="skills-graphic">
+                    <div ref={graphRef}  className={`skills-graphic ${graphIsVisible && "appear"}`}>
                         <span className="front">Front</span>
                         <span className="back">Back</span>
                         <span className="inner-circle-1"></span>

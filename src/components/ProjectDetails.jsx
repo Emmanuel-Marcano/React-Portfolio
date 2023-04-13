@@ -9,7 +9,8 @@ function ProjectDetails(props){
 
         <div className="project-details-overlay">
             <div className='project-details'>
-                        <button onClick={props.closeModal}>X</button>
+                        {/* <button onClick={props.closeModal}>X</button> */}
+                        <i  onClick={props.closeModal} class="fa-solid fa-circle-xmark fa-2x"></i>
                         <h2 className='project-title'>{props.title}</h2>
                         <div className='project-tags'>
                             <span>HTML</span>
