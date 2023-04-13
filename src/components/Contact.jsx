@@ -18,7 +18,7 @@ function Contact(){
                 <div className="contact-cards">
 
                     <div className="card linkedin-card">
-                        <div className="card-curve">
+                        <div className="socials">
                             <span>CONTACT</span>
                             <a target="_blank" className="contact-icons contact-linkedin" href="https://www.linkedin.com/in/emmanuel-marcano-a7a847246/"> <i className="fa-brands fa-linkedin fa-2x"></i></a>
                             <a className="contact-icons contact-email " href=""> <i className="fa-solid fa-envelope fa-2x"></i></a>
