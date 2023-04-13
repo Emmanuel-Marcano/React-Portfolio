@@ -581,7 +581,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   position: relative;
   display: flex;
   gap: 5px;
-  font-size: 12px;
+  font-size: 10px;
 
 }
 
@@ -697,6 +697,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   border-radius: 10px;
   margin: 15px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  overflow: hidden;
 }
 
 
@@ -719,14 +720,14 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 .linkedin-card {
   position: relative;
   right: -35px;
-  overflow: hidden;
+
 }
 
 .socials{
-  position: absolute;
-  top:0;
+  /* position: absolute; */
+  /* top:0;
   left: 0;
-  width: 100%;
+  width: 100%; */
   background-color: #333333;
   height: 100%;
   transform: translateX(-100%);
@@ -1034,7 +1035,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   top: 155px;
 }
 
-.card-curve{
+.socials{
   width: 200px;
   height: 200px;
   
