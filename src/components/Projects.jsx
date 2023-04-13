@@ -17,17 +17,23 @@ import { useState } from 'react'
 
 let algoVisualizer = {
     title: "Sorting Algorithm Visualizer",
-    description: "Interactive user application that allows the user to visualize common sorting algorithm such as Bubble Sort, Selection Sort and Insertion Sort. I developed it to not only help myself understand sorting algorithms, but to also help other developers embarking on the data structures and algorithm journey get a grasp of how they work."
+    description: "Interactive user application that allows the user to visualize common sorting algorithm such as Bubble Sort, Selection Sort and Insertion Sort. I developed it to not only help myself understand sorting algorithms, but to also help other developers embarking on the data structures and algorithm journey get a grasp of how they work.",
+    href: "https://emmanuel-marcano.github.io/Sorting-algorithm-visualizer/",
+    github: "https://github.com/Emmanuel-Marcano/Sorting-algorithm-visualizer"
 }
 
 let weatherApp = {
     title: "Weather Application",
-    description: "Web Application that accepts user input and fetches to an external API called EDAMAM, the current weather of over 200 cities around the world."
+    description: "Web Application that accepts user input and fetches to an external API called EDAMAM, the current weather of over 200 cities around the world.",
+    href: "https://emmanuel-marcano.github.io/Weather-app/",
+    github: "https://github.com/Emmanuel-Marcano/Weather-app"
 }
 
 let starbucksClone = {
     title: "Starbucks Homepage Clone",
-    description: "A recreation of the starbucks primary homepage."
+    description: "A recreation of the starbucks primary homepage.",
+    href: "https://emmanuel-marcano.github.io/restaurant-web-app/",
+    github: "https://github.com/Emmanuel-Marcano/restaurant-web-app/tree/main"
 }
 
 
@@ -79,9 +85,9 @@ function Projects(){
 
             
 
-            {showVisualizer && <ProjectDetails title = {algoVisualizer.title} description = {algoVisualizer.description} closeModal = {closeVisualizerModal}/>}
-            {showWeatherApp && <ProjectDetails title = {weatherApp.title} description = {weatherApp.description} closeModal={closeWeatherAppModal}/>}
-            {showStarbucksPage && <ProjectDetails title = {starbucksClone.title} description = {starbucksClone.description} closeModal={closeStarbucksModal}/>}
+            {showVisualizer && <ProjectDetails title = {algoVisualizer.title} description = {algoVisualizer.description} href={algoVisualizer.href} github={algoVisualizer.github} closeModal = {closeVisualizerModal}/>}
+            {showWeatherApp && <ProjectDetails title = {weatherApp.title} description = {weatherApp.description} href={weatherApp.href} github={weatherApp.github} closeModal={closeWeatherAppModal}/>}
+            {showStarbucksPage && <ProjectDetails title = {starbucksClone.title} description = {starbucksClone.description} href={starbucksClone.href} github={starbucksClone.github} closeModal={closeStarbucksModal}/>}
 
             
 

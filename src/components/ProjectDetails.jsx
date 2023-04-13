@@ -18,8 +18,8 @@ function ProjectDetails(props){
                         </div>
                         <p className='project-description'>{props.description}</p>
 
-                        <a className='btn' href="">View project</a>
-                        <a className='btn' href="">View code</a>
+                        <a className='btn' target="_blank" href={props.href}>View project</a>
+                        <a className='btn' target="_blank" href={props.github}>View code</a>
             </div>
         </div>
 

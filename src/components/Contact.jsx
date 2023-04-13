@@ -13,7 +13,7 @@ function Contact(){
                        Thank you for checking out my portfolio. 
                        I look forward to hearing from you! </p>
 
-                       <a className="btn" href="">Hover me</a>
+                       <a className="btn" href="">Button</a>
                 </div>
                 <div className="contact-cards">
 
