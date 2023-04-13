@@ -1,15 +1,9 @@
-import eth from '../assets/eth.avif'
-import alphabet from '../assets/alphabet.avif'
-import traveler from '../assets/traveler.avif'
-import cube from '../assets/cube.avif'
-import astro from '../assets/astro.avif'
-import cup from '../assets/cup.avif'
-import insta from '../assets/insta.avif'
-import foam from '../assets/foam.avif'
-import dimensional from '../assets/dimensional.avif'
+
 import visualizerImg from '../assets/visualizer.png'
 import weatherAppImg from '../assets/weatherapp.png'
-import littleLemon from '../assets/littlelemon.png'
+import littleLemonImg from '../assets/littlelemon.png'
+import steamFormImg from '../assets/steamForm.png'
+import starbucksImg from '../assets/starbucks.png'
 
 import ProjectDetails from './ProjectDetails'
 import { useState } from 'react'
@@ -32,6 +26,13 @@ let weatherApp = {
 let starbucksClone = {
     title: "Starbucks Homepage Clone",
     description: "A recreation of the starbucks primary homepage.",
+    href: "https://emmanuel-marcano.github.io/starbucks-clone/",
+    github: "https://github.com/Emmanuel-Marcano/starbucks-clone"
+}
+
+let littleLemon = {
+    title: "Little Lemon",
+    description: "Website of a fictional mediterranean restaurant called Little Lemon. It was the capscone project of the Frontend Developer proffesional certificate course i completed.",
     href: "https://emmanuel-marcano.github.io/restaurant-web-app/",
     github: "https://github.com/Emmanuel-Marcano/restaurant-web-app/tree/main"
 }
@@ -43,6 +44,7 @@ function Projects(){
     let [showVisualizer, setShowVisualizer] = useState(false)
     let [showWeatherApp, setShowWeatherApp] = useState(false)
     let [showStarbucksPage, setStarbucksPage] = useState(false)
+    let [showLittleLemon, setLittleLemon] = useState(false)
 
     function handleVisualizer(){
         setShowVisualizer(!showVisualizer)
@@ -55,6 +57,11 @@ function Projects(){
     function handleStarbucksPage(){
         setStarbucksPage(!showStarbucksPage)
     }
+
+    function handleLittleLemon(){
+        setLittleLemon(!showLittleLemon)
+    }
+
 
 
 
@@ -69,6 +76,10 @@ function Projects(){
 
     function closeStarbucksModal(){
         setStarbucksPage(!setStarbucksPage)
+    }
+
+    function closeLittleLemonModal(){
+        setLittleLemon(!showLittleLemon)
     }
 
     console.log(showVisualizer)
@@ -88,6 +99,7 @@ function Projects(){
             {showVisualizer && <ProjectDetails title = {algoVisualizer.title} description = {algoVisualizer.description} href={algoVisualizer.href} github={algoVisualizer.github} closeModal = {closeVisualizerModal}/>}
             {showWeatherApp && <ProjectDetails title = {weatherApp.title} description = {weatherApp.description} href={weatherApp.href} github={weatherApp.github} closeModal={closeWeatherAppModal}/>}
             {showStarbucksPage && <ProjectDetails title = {starbucksClone.title} description = {starbucksClone.description} href={starbucksClone.href} github={starbucksClone.github} closeModal={closeStarbucksModal}/>}
+            {showLittleLemon && <ProjectDetails title = {littleLemon.title} description = {littleLemon.description} href={littleLemon.href} github={littleLemon.github} closeModal={closeLittleLemonModal}/>}
 
             
 
@@ -97,7 +109,7 @@ function Projects(){
 
         <div className='project-grid'>
 
-            <div className="project" id='eth'>
+            <div className="project" id='visualizer'>
                 <img src={visualizerImg} alt="" />
                 <div className='overlay'>
                         <h1>Sorting Algorithm Visualizer</h1>
@@ -105,7 +117,7 @@ function Projects(){
                 </div>
             </div>
 
-            <div className="project" id='alphabet'>
+            <div className="project" id='weatherApp'>
                 <img src={weatherAppImg} alt="" />
                 <div className='overlay'>
                 <h1>Weather Application</h1>
@@ -113,34 +125,36 @@ function Projects(){
                 </div>
             </div>
 
-            <div className="project" id='traveler'>
-                <img src={littleLemon} alt="" />
+            <div className="project" id='littleLemon'>
+                <img src={littleLemonImg} alt="" />
                 <div className='overlay'>
 
-                    <h1>Starbucks</h1>
-                    <span onClick={handleStarbucksPage}  className='btn'>VIEW PROJECT</span>
+                    <h1>Little Lemon</h1>
+                    <span onClick={handleLittleLemon}  className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
 
-            <div className="project" id='cube'>
-                <img src={cube} alt="" />
+            <div className="project" id='steamForm'>
+                <img src={steamFormImg} alt="" />
                 <div className='overlay'>
                     
-                    
+                    <h1>Steam Form</h1>
                 <span  className='btn'>VIEW PROJECT</span>
                     
                     </div>
             </div>
 
-            <div className="project" id='astro'>
-                <img src={astro} alt="" />
+            <div className="project" id='starbucks'>
+                <img src={starbucksImg} alt="" />
                 <div className='overlay'>
+
+                    <h1>Starbucks</h1>
                     
-                   <span  className='btn'>VIEW PROJECT</span>
+                   <span onClick={handleStarbucksPage}  className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
 
-            <div className="project" id='cup'>
+            {/* <div className="project" id='cup'>
                 <img src={cup} alt="" />
                 <div className='overlay'>
                 <span className='btn'>VIEW PROJECT</span>
@@ -166,7 +180,7 @@ function Projects(){
                 <div className='overlay'>
                 <span  className='btn'>VIEW PROJECT</span>
                 </div>
-            </div>
+            </div> */}
         </div>
 
         </div> 
