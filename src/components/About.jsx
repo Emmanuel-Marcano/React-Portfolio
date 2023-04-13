@@ -157,11 +157,11 @@ function About(){
             </div>
 
 
-            <div className="long-height">
+            {/* <div className="long-height">
 
 
 
-            </div>
+            </div> */}
 
             <Footer/>
 

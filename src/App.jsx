@@ -29,7 +29,6 @@ function App() {
             <Route path='/contact' element={<Contact/>}/> 
             <Route path='/blog' element={<Blog/>}/> 
           </Routes>
-         
           <Navigation nav={navBar}/>
        </Container>
     </div>

@@ -9,39 +9,23 @@ import foam from '../assets/foam.avif'
 import dimensional from '../assets/dimensional.avif'
 
 import ProjectDetails from './ProjectDetails'
-
-
 import { useState } from 'react'
 
-// let projectInfo = [
-
-
-
-// ]
 
 let algoVisualizer = {
     title: "Sorting Algorithm Visualizer",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis fugit obcaecati excepturi non consectetur animi consequuntur?"
+    description: "Interactive user application that allows the user to visualize common sorting algorithm such as Bubble Sort, Selection Sort and Insertion Sort. I developed it to not only help myself understand sorting algorithms, but to also help other developers embarking on the data structures and algorithm journey get a grasp of how they work."
 }
 
 let weatherApp = {
     title: "Weather Application",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis fugit obcaecati excepturi non consectetur animi consequuntur?"
+    description: "Web Application that accepts user input and fetches to an external API called EDAMAM, the current weather of over 200 cities around the world."
 }
 
 let starbucksClone = {
     title: "Starbucks Homepage Clone",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ut facere, in veritatis est voluptatibus eius quam porro! Fuga eaque labore sequi blanditiis fugit obcaecati excepturi non consectetur animi consequuntur?"
+    description: "A recreation of the starbucks primary homepage."
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -107,20 +91,15 @@ function Projects(){
             <div className="project" id='eth'>
                 <img src={eth} alt="" />
                 <div className='overlay'>
-
-            
-                      
+                        <h1>Sorting Algorithm Visualizer</h1>
                         <span onClick={handleVisualizer} className='btn'>VIEW PROJECT</span>
-                 
-
-                 
-
                 </div>
             </div>
 
             <div className="project" id='alphabet'>
                 <img src={alphabet} alt="" />
                 <div className='overlay'>
+                <h1>Weather Application</h1>
                    <span onClick={handleWeatherApp} className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
@@ -128,6 +107,8 @@ function Projects(){
             <div className="project" id='traveler'>
                 <img src={traveler} alt="" />
                 <div className='overlay'>
+
+                    <h1>Starbucks</h1>
                     <span onClick={handleStarbucksPage}  className='btn'>VIEW PROJECT</span>
                 </div>
             </div>
