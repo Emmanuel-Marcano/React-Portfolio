@@ -8,5 +8,5 @@ export default defineConfig({
     port: 3000,
   },
 
-  base: "https://emmanuel-marcano.github.io/react-portfolio/",
+  base: "/react-portfolio/",
 })
