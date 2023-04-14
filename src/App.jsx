@@ -18,7 +18,7 @@ function App() {
 
   return (
 
-    <BrowserRouter>
+    <BrowserRouter basename='/react-portfolio/'>
     <div  className="">
       <div ref={navBar} className="nav-bar"></div>
       <Container>
