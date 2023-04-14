@@ -6,7 +6,7 @@
   --accentColor: #333333;
   --typewriterSpeed: 1s;
   --typewriterCharacters: 5;
-  --desktopFontSize: 20px;
+  --desktopFontSize: 18px;
   --mobileFontSize: 18px;
   --animationSpeed: 1s;
 }
@@ -705,7 +705,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   animation-delay: 1s;
 }
 
-.socials span {
+.vertical-contact {
   color: #f5f5f5;
   position: absolute;
   top: 12px;
@@ -717,6 +717,32 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   font-weight: 800;
 }
 
+.email-copied {
+  opacity: 0;
+  padding: 5px;
+  border-radius: 5px;
+  
+
+  position: absolute;
+  font-size: 10px;
+  background-color: #f5f5f5;
+  color: #333333;
+  top: 12px;
+  left: 65px;
+
+  transform: translateY(-200%);
+  animation: slide-in-from-top 1s ease alternate;
+  animation-iteration-count: 2;
+  
+  
+
+  
+
+
+
+}
+
+
 .contact-icons {
   position: absolute;
   cursor: pointer;
@@ -727,20 +753,20 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 .contact-linkedin {
-  top: 12px;
-  right: 260px;
+  top: 115px;
+  right: 230px;
   animation-delay: 2s;
 }
 
 .contact-email {
-  top: 63px;
-  right: 257px;
+  top: 115px;
+  right: 280px;
   animation-delay: 2.3s;
 }
 
 .contact-github {
   top: 115px;
-  right: 258px;
+  right: 330px;
   animation-delay: 2.5s;
 }
 
@@ -754,6 +780,13 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   100%{
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-from-top {
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -968,7 +1001,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 .project-description {
-  font-size: 20px;
+  font-size: var(--desktopFontSize);
 
 }
 
