@@ -4,7 +4,12 @@ function Home(){
 
     return (
         <div className="homepage">
-            <h1>Hi, my name is Emmanuel</h1>
+
+            <h1>
+                <RoughNotation type="underline" strokeWidth={2} show={true}>
+                Hi, my name is Emmanuel
+                </RoughNotation>
+                </h1>
                 <p className="static-text">I'm an Amsterdam based</p>
                 <p className="static-text">Front-End Developer with</p>
                 <div className="flex">

@@ -4,6 +4,7 @@ import weatherAppImg from '../assets/weatherapp.png'
 import littleLemonImg from '../assets/littlelemon.png'
 import steamFormImg from '../assets/steamForm.png'
 import starbucksImg from '../assets/starbucks.png'
+import { RoughNotation, RoughNotationGroup} from "react-rough-notation";
 
 import ProjectDetails from './ProjectDetails'
 import { useState } from 'react'
@@ -92,7 +93,7 @@ function Projects(){
 
         <div className='content-container'>
 
-            <h1 className='h1'>projects.</h1>
+            <h1 className='h1'><RoughNotation type='strike-through' strokeWidth={8} animationDelay={1000} show={true}>projects.</RoughNotation></h1>
 
             
 

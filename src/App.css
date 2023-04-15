@@ -171,6 +171,10 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-image: url(../src/assets/bgHomeimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; */
 }
 
 .homepage h1 {
@@ -1017,34 +1021,36 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 
 
 
-
+.email-copied {
+  font-size: 18px;
+  left: 120px;
+}
 
 .contact-email{
-  top: 80px;
+  top: 155px;
+  left: 200px;
+}
 
-
+.contact-linkedin {
+  top: 155px;
+  left: 320px;
 }
 
 .contact-github {
   top: 155px;
+  left: 100px;
 }
 
 .contact-text{
   margin-bottom: 100px;
 }
 
-.socials span{
+.vertical-contact{
   top: 10px;
   left: 14px;
   font-size: 21px;
  
 }
-
-/* .socials{
-  width: 200px;
-  height: 200px;
-  
-} */
 
 
 

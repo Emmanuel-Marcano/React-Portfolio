@@ -1,6 +1,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import {useInView} from "react-intersection-observer"
+import { RoughNotation, RoughNotationGroup} from "react-rough-notation";
 import Footer from "./Footer"
 
 
@@ -36,7 +37,10 @@ function About(){
                 <div className="about-showcase">
                     <div className="about-text">
 
-                        <h1 className="h1">about.</h1>
+                        <h1 className='h1'>about.</h1>
+
+
+
 
                         <span> <b> Born </b> in Puerto Rico. <br />  <b> Based </b> in Amsterdam, Netherlands.</span>
                        
