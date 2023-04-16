@@ -12,6 +12,7 @@ import setUp from '../assets/set-up.jpg'
 import workout from '../assets/working-out.jpg'
 import cooking from '../assets/cooking.jpg'
 import puertoRico from '../assets/PR.jpg'
+import faDev from '../assets/fadev.jpg'
 
 
 function About(){
@@ -26,6 +27,11 @@ function About(){
     })
 
     let {ref: graphRef, inView: graphIsVisible} = useInView({
+        triggerOnce: true
+        
+    })
+
+    let {ref: devRef, inView: devIsVisible} = useInView({
         triggerOnce: true
         
     })
@@ -149,7 +155,7 @@ function About(){
             </div>
 
             <div className="developer-journey">
-                <div className="content-container grid">
+                <div className="content-container add-gap grid">
                     <div className="journey-text">
                         <h1>Software Developer</h1>
                         <p>My education along with the experience gained creating personal projects
@@ -161,7 +167,7 @@ function About(){
                     </div>
 
                     <div className="journey-image">
-                        <img src={setUp} alt="" />
+                        <img ref={devRef} className={`dev ${devIsVisible && "appear"}`}  src={faDev} alt="" />
                     </div>    
                 </div>
             </div>

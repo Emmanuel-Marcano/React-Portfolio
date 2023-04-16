@@ -12,7 +12,7 @@ import { useState } from 'react'
 
 let algoVisualizer = {
     title: "Sorting Algorithm Visualizer",
-    description: "Interactive user application that allows the user to visualize common sorting algorithm such as Bubble Sort, Selection Sort and Insertion Sort. I developed it to not only help myself understand sorting algorithms, but to also help other developers embarking on the data structures and algorithm journey get a grasp of how they work.",
+    description: "Interactive user application that allows the user to visualize common sorting algorithm such as Bubble Sort, Selection Sort and Insertion Sort. I developed it to not only help myself understand sorting algorithms, but to also help other developers embarking on the data structures and algorithm journey get a firmer grasp of how they work.",
     href: "https://emmanuel-marcano.github.io/Sorting-algorithm-visualizer/",
     github: "https://github.com/Emmanuel-Marcano/Sorting-algorithm-visualizer"
 }
@@ -33,7 +33,7 @@ let starbucksClone = {
 
 let littleLemon = {
     title: "Little Lemon",
-    description: "Website of a fictional mediterranean restaurant called Little Lemon. It was the capscone project of the Frontend Developer proffesional certificate course i completed.",
+    description: "Website of a fictional mediterranean restaurant called Little Lemon. It was the capstone project of the Frontend Developer proffesional certificate course i completed.",
     href: "https://emmanuel-marcano.github.io/restaurant-web-app/",
     github: "https://github.com/Emmanuel-Marcano/restaurant-web-app/tree/main"
 }
@@ -93,7 +93,7 @@ function Projects(){
 
         <div className='content-container'>
 
-            <h1 className='h1'><RoughNotation type='strike-through' strokeWidth={8} animationDelay={1000} show={true}>projects.</RoughNotation></h1>
+            <h1 className='h1'>projects.</h1>
 
             
 
