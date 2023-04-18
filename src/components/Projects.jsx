@@ -33,9 +33,16 @@ let starbucksClone = {
 
 let littleLemon = {
     title: "Little Lemon",
-    description: "Website of a fictional mediterranean restaurant called Little Lemon. It was the capstone project of the Frontend Developer proffesional certificate course i completed.",
+    description: "Website for a fictional mediterranean restaurant called Little Lemon. It was the capstone project of the Frontend Developer proffesional certificate course i completed.",
     href: "https://emmanuel-marcano.github.io/restaurant-web-app/",
     github: "https://github.com/Emmanuel-Marcano/restaurant-web-app/tree/main"
+}
+
+let steamForm = {
+    title: "Steam Form",
+    description: "Form for the steam platform.",
+    href: "https://emmanuel-marcano.github.io/steam-form/",
+    github: "https://github.com/Emmanuel-Marcano/steam-form"
 }
 
 
@@ -46,6 +53,7 @@ function Projects(){
     let [showWeatherApp, setShowWeatherApp] = useState(false)
     let [showStarbucksPage, setStarbucksPage] = useState(false)
     let [showLittleLemon, setLittleLemon] = useState(false)
+    let [showSteamForm, setSteamForm] = useState(false)
 
     function handleVisualizer(){
         setShowVisualizer(!showVisualizer)
@@ -61,6 +69,10 @@ function Projects(){
 
     function handleLittleLemon(){
         setLittleLemon(!showLittleLemon)
+    }
+
+    function handleSteamForm(){
+        setSteamForm(!showSteamForm)
     }
 
 
@@ -83,6 +95,10 @@ function Projects(){
         setLittleLemon(!showLittleLemon)
     }
 
+    function closeSteamFormModal(){
+        setSteamForm(!showSteamForm)
+    }
+
     console.log(showVisualizer)
 
    
@@ -101,6 +117,7 @@ function Projects(){
             {showWeatherApp && <ProjectDetails title = {weatherApp.title} description = {weatherApp.description} href={weatherApp.href} github={weatherApp.github} closeModal={closeWeatherAppModal}/>}
             {showStarbucksPage && <ProjectDetails title = {starbucksClone.title} description = {starbucksClone.description} href={starbucksClone.href} github={starbucksClone.github} closeModal={closeStarbucksModal}/>}
             {showLittleLemon && <ProjectDetails title = {littleLemon.title} description = {littleLemon.description} href={littleLemon.href} github={littleLemon.github} closeModal={closeLittleLemonModal}/>}
+            {showSteamForm && <ProjectDetails title = {steamForm.title} description = {steamForm.description} href={steamForm.href} github={steamForm.github} closeModal={closeSteamFormModal}/>}
 
             
 
@@ -140,7 +157,7 @@ function Projects(){
                 <div className='overlay'>
                     
                     <h1>Steam Form</h1>
-                <span  className='btn'>VIEW PROJECT</span>
+                <span onClick={handleSteamForm}  className='btn'>VIEW PROJECT</span>
                     
                     </div>
             </div>
