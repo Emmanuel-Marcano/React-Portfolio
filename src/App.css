@@ -177,6 +177,49 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
     background-position: top; */
 }
 
+.light-half {
+ 
+  flex-grow: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transform: translateY(-100%);
+  animation: slide-in-from-top 1s ease forwards;
+
+  
+
+
+
+}
+
+.light-half h1{
+  margin-bottom: 15px;
+}
+
+.dark-half{
+  
+  
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(100%);
+  animation: slide-in-from-top 1s ease forwards;
+  background-color: #171717;
+  color: white;
+
+
+}
+
+.dark-half > p:first-child{
+  margin-top: 20px;
+ 
+}
+
+
+
 .homepage h1 {
   font-size: 28px;
 }
@@ -200,6 +243,7 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
   margin-top: 0;
   margin-left: 8px;
   overflow: hidden;
+  color: white;
 }
 
 .dynamic-text li {
@@ -233,14 +277,14 @@ box-shadow:#cdcbcb 3px 3px 6px 0px inset, #cdcbcb -3px -3px 6px 1px inset;
 }
 
 .dynamic-text span::before {
-  background: var(--bg-color);
+  background: #171717;
   animation: typewriter var(--typewriterSpeed)
    infinite alternate;
 }
 
 .dynamic-text span::after {
   width: 0.125em;
-  background: black;
+  background: white;
   animation: typewriter var(--typewriterSpeed)
       infinite alternate,
     blink 750ms steps(var(--typewriterCharacters)) infinite;
