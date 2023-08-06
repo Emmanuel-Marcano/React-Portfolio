@@ -111,19 +111,11 @@ function Projects(){
 
             <h1 className='h1'>projects.</h1>
 
-            
-
             {showVisualizer && <ProjectDetails title = {algoVisualizer.title} description = {algoVisualizer.description} href={algoVisualizer.href} github={algoVisualizer.github} closeModal = {closeVisualizerModal}/>}
             {showWeatherApp && <ProjectDetails title = {weatherApp.title} description = {weatherApp.description} href={weatherApp.href} github={weatherApp.github} closeModal={closeWeatherAppModal}/>}
             {showStarbucksPage && <ProjectDetails title = {starbucksClone.title} description = {starbucksClone.description} href={starbucksClone.href} github={starbucksClone.github} closeModal={closeStarbucksModal}/>}
             {showLittleLemon && <ProjectDetails title = {littleLemon.title} description = {littleLemon.description} href={littleLemon.href} github={littleLemon.github} closeModal={closeLittleLemonModal}/>}
             {showSteamForm && <ProjectDetails title = {steamForm.title} description = {steamForm.description} href={steamForm.href} github={steamForm.github} closeModal={closeSteamFormModal}/>}
-
-            
-
-          
-
-
 
         <div className='project-grid'>
 
