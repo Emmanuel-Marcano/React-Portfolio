@@ -1,14 +1,17 @@
 
 import { RoughNotation, RoughNotationGroup} from "react-rough-notation";
+import {Link} from 'react-router-dom'
+import selfie from '../assets/selfie.jpeg'
 function Home(){
 
     return (
         <div className="homepage">
 
             <div className="light-half">
+                <img className="selfie" src={selfie} alt="" />
 
                     <h1>Hi, my name is Emmanuel</h1>
-                </div>
+            </div>
 
                 <div className="dark-half">
                     <p className="static-text">I'm an Amsterdam based</p>

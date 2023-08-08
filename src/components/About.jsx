@@ -163,7 +163,10 @@ function About(){
                             proffessional environment where i can tackle any problem for the 
                             benefit of the company and effectively solve it through code.
                         </p>
-                        <a className="btn" href="#">Hire me</a>
+                        {/* <Link to="/Contact">
+                          <p className="btn" href="#">Hire me</p>
+                        </Link> */}
+                      
                     </div>
 
                     <div className="journey-image">
